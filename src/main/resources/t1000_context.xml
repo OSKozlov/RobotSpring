@@ -8,7 +8,7 @@
 	<import resource="db_context.xml"/>
 
 	<bean id="t1000"
-		class="ru.javabegin.training.spring.impls.robot.ModelT1000" depends-on="databaseBean">
+		class="ru.javabegin.training.spring.impls.robot.ModelT1000" scope="prototype">
 		<constructor-arg ref="sonyHand"></constructor-arg>
 		<constructor-arg ref="sonyLeg"></constructor-arg>
 		<constructor-arg ref="sonyHead"></constructor-arg>
