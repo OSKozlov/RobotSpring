@@ -7,12 +7,15 @@
 	<import resource="toshiba_context.xml"/>
 	<import resource="db_context.xml"/>
 
+	<bean id="actionReplacer" class="ru.javabegin.training.spring.impls.robot.ActionReplacer"></bean>
+
 	<bean id="t1000"
 		class="ru.javabegin.training.spring.impls.robot.ModelT1000" scope="prototype">
 		<constructor-arg ref="sonyHand"></constructor-arg>
 		<constructor-arg ref="sonyLeg"></constructor-arg>
 		<constructor-arg ref="sonyHead"></constructor-arg>
 
+		<replaced-method name="action" replacer="actionReplacer"></replaced-method>
 <!-- 		<property name="hand" ref="toshibaHand"></property>
 		<property name="head" ref="toshibaHead"></property>
 		<property name="leg" ref="toshibaLeg"></property> -->

@@ -26,7 +26,7 @@ public class ModelT1000 implements Robot, InitializingBean, DisposableBean {
 	}	
 
 	@Override
-	public void fire() {
+	public void action() {
 		head.calc();
 		hand.catchSomething();
 		leg.go();
