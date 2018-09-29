@@ -1,4 +1,4 @@
-package ru.javabegin.training.spring.impls.robot;
+package ru.javabegin.training.spring.impls.replacer;
 
 import java.lang.reflect.Method;
 
